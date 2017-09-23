@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { addComment, removeComment, increment } from '../actions';
 import './PhotoGrid.css';
 //import Photo from './photo';
@@ -7,7 +8,8 @@ import { GridList, GridTile } from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import Subheader from 'material-ui/Subheader';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
-// material ui http://www.material-ui.com/#/components/grid-list
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+
 
 const styles = {
   root: {
@@ -15,31 +17,32 @@ const styles = {
     flexWrap: 'wrap',
     justifyContent: 'space-around',
   },
-  gridList: {
-    width: 500,
-    height: 450,
-    overflowY: 'auto',
-  },
+  titleStyle: {
+    height: 500
+  }
+
 };
 
 class PhotoGrid extends Component {
   render() {
     return (
+      <MuiThemeProvider>
       <div style={styles.root}>
-        <GridList cellHeight={180} styles={styles.gridList}>
-          {/*
-            this.props.posts.map( (post, i) => <Photo {...this.props} key={i} i={i} post={post}/> )
-          */}
+        <GridList cellHeight={400} cols={3}  padding={5}>
           {
-            this.props.posts.map( (post, i) => {
-              return (
-                <GridTile key={i} title={post.caption}>
-                  <img src={post.display_src}/>
+            this.props.posts.map( (post, i) => (
+                <GridTile key={i} >
+                  <Card>
+                    <CardMedia overlay={<CardTitle title={post.caption} /> }>
+                      <img src={post.display_src}/>
+                    </CardMedia>
+                  </Card>
                 </GridTile>
-              )
-            })
+              ))
           }
         </GridList>
+      </div>
+      </MuiThemeProvider>
     );
   }
 }
