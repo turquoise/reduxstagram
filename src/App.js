@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux'
-import PropTypes from 'prop-types';
 import {
   BrowserRouter as Router,
   Route,
@@ -19,15 +17,15 @@ class App extends Component {
           <Router>
             <div>
               <div>
-                <div><Link to="/">Home</Link></div>
-                <div><Link to="/photogrid">Reduxstagram</Link></div>
+                <Link to="/"><h1>Reduxstagram</h1></Link>
+                <div><Link to="/photogrid">Photogrid</Link></div>
               </div>
               <div>
                 <Route exact path="/" component={Main} />
-                <Route exact path="/photogrid" component={PhotoGrid} />
+                <Route path="/photogrid" component={PhotoGrid} />
                 <Route path="/view/:postId" component={Single} />
               </div>
-            </div>  
+            </div>
           </Router>
       </div>
     );

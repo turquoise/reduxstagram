@@ -11,7 +11,7 @@ import { createStore } from 'redux'
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 //import App from './App';
-import rootReducer from './reducers';
+import rootReducer from './reducers/index';
 //import Root from './root';
 //import PhotoGrid from './components/PhotoGrid';
 import App from './App';
