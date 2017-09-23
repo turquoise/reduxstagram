@@ -12,23 +12,21 @@ class PhotoGrid extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row">
-          <div className="col-sm-12 text-cemter">
+        <ul className="list-group">
             {/*
               this.props.posts.map( (post, i) => <Photo {...this.props} key={i} i={i} post={post}/> )
             */}
             {
               this.props.posts.map( (post, i) => {
                 return (
-                  <div className="responsive" key={post.id}>
-                    <img src={post.display_src} alt={post.caption} />
-                    <div>{post.caption}</div>
-                  </div>
+                  <li className="list-group-item" key={i} flex-row align-items-start>
+                      <img className="image" src={post.display_src} alt={post.caption} />
+                      <div>{post.caption}</div>
+                  </li>
                 )
               })
             }
-          </div>
-        </div>
+        </ul>
       </div>
     );
   }
