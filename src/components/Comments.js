@@ -6,8 +6,10 @@ import './Comment.css';
 class Comments extends Component {
   constructor(props) {
     super(props);
-    //console.log('this.props.postId ', this.props.postId);
+    const postId = this.props.postId;
+    console.log('postId ', postId);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderComment = this.renderComment.bind(this);
   }
 
   handleSubmit(event) {
@@ -24,12 +26,14 @@ class Comments extends Component {
 
   renderComment(comment, i) {
     //console.log('comment ', comment);
+    //console.log('renderComment postId ', this.props.postId);
     return (
       <div className="comment" key={i}>
         <p>
           <strong>{comment.user} - </strong>
           {comment.text}
-          <button className="remove-comment">&times;</button>
+          <button className="remove-comment"
+                  onClick={this.props.removeComment.bind(null, this.props.postId, i)}>&times;</button>
         </p>
       </div>
     )

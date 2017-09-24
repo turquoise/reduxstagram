@@ -7,14 +7,14 @@ function comments(state = comments_json, action) {
     case ADD_COMMENT:
     const postId = action.postId;
       return [
-        ...state.slice(),
-        {
-          user: action.author,
-          text: action.comment
-        }
-      ];
+        ...state.push(action.postId, action.author, action.comment)
+      ]
     case REMOVE_COMMENT:
-      return state;
+      const i = action.i;
+      return [
+        ...state.slice(0, i ),
+        ...state.slice(i, + 1 )
+      ]
     default:
       console.log('comments state ', state);
       return state;
