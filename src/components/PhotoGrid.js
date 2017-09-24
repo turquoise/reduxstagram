@@ -38,7 +38,7 @@ class PhotoGrid extends Component {
             this.props.posts.map( (post, i) => (
                 <GridTile key={i} >
                   <Card style={styles.root}>
-                    <Link to={`${post.code}`}>
+                    <Link to={`/${post.code}`}>
                       <CardMedia overlay={<CardTitle subtitle={post.caption}/> }>
                         <img src={post.display_src} className="photo"/>
                       </CardMedia>
