@@ -25,4 +25,7 @@ a:hover, a:visited, a:link, a:active {
 
 h1 {
   margin: 20px;
+  color: black;
+  font-size: 60px;
+  font-family: 'Amatic SC', cursive;
 }
