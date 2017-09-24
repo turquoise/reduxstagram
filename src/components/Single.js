@@ -22,7 +22,7 @@ class Single extends Component {
           <Link to="/"><h1>Reduxstagram</h1></Link>
           <div className="row">
             <div className="col-6">
-              <img className="single-photo" src={post.display_src} alt={post.caption} />
+              <img className="single-photo" src={post.display_src}  />
               <div>
                 <button className="btn btn-secondary likes" onClick={this.props.increment.bind(null, i)}>
                   <i className="fa fa-heart" aria-hidden="true"></i> {post.likes}
