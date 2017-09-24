@@ -19,7 +19,7 @@ class Single extends Component {
 
     return (
         <div className="container">
-          <Link to="/photogrid"><h1>Reduxstagram</h1></Link>
+          <Link to="/"><h1>Reduxstagram</h1></Link>
           <div className="row">
             <div className="col-6">
               <img className="single-photo" src={post.display_src} alt={post.caption} />

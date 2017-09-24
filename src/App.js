@@ -18,8 +18,8 @@ class App extends Component {
           <Router>
             <div>
               <Switch>
-                <Route exact path="/photogrid" component={PhotoGrid} />
-                <Route path="/photogrid/:postId" component={Single} />
+                <Route exact path="/" component={PhotoGrid} />
+                <Route path="/:postId" component={Single} />
               </Switch>
             </div>
 
