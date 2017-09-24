@@ -29,6 +29,7 @@ class PhotoGrid extends Component {
   }
   render() {
     return (
+      <div>
       <MuiThemeProvider>
       <div style={styles.root}>
         <GridList cellHeight={400} cols={4}  padding={10}>
@@ -63,6 +64,7 @@ class PhotoGrid extends Component {
         </GridList>
       </div>
       </MuiThemeProvider>
+    </div>
     );
   }
 }

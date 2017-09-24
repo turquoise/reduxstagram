@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 
 import './App.css';
-import Main from './components/Main';
+//import Main from './components/Main';
 import Single from './components/Single';
 import PhotoGrid from './components/PhotoGrid';
 
@@ -18,14 +18,13 @@ class App extends Component {
             <div>
               <div>
                 <Link to="/"><h1>Reduxstagram</h1></Link>
-                <div><Link to="/photogrid">Photogrid</Link></div>
               </div>
               <div>
-                <Route exact path="/" component={Main} />
-                <Route path="/photogrid" component={PhotoGrid} />
+                <Route exact path="/" component={PhotoGrid} />
                 <Route path="/view/:postId" component={Single} />
               </div>
             </div>
+
           </Router>
       </div>
     );
