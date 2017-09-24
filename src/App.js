@@ -17,9 +17,6 @@ class App extends Component {
           <Router>
             <div>
               <div>
-                <Link to="/"><h1>Reduxstagram</h1></Link>
-              </div>
-              <div>
                 <Route exact path="/" component={PhotoGrid} />
                 <Route path="/view/:postId" component={Single} />
               </div>

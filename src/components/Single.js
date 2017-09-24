@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { addComment, removeComment, increment } from '../actions';
 //import Photo from './photo';
 import Comments from './Comments';
@@ -18,6 +19,7 @@ class Single extends Component {
 
     return (
         <div className="container">
+          <Link to="/"><h1>Reduxstagram</h1></Link>
           <div className="row">
             <div className="col-6">
               <img className="single-photo" src={post.display_src} alt={post.caption} />

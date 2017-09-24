@@ -30,6 +30,7 @@ class PhotoGrid extends Component {
   render() {
     return (
       <div>
+        <h1>Reduxstagram</h1>
       <MuiThemeProvider>
       <div style={styles.root}>
         <GridList cellHeight={400} cols={4}  padding={10}>
