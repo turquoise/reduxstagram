@@ -18,7 +18,7 @@ class App extends Component {
             <div>
               <div>
                 <Route exact path="/" component={PhotoGrid} />
-                <Route path="/view/:postId" component={Single} />
+                <Route path="/:postId" component={Single} />
               </div>
             </div>
 
