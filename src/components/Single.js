@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addComment, removeComment, increment } from '../actions';
-//import Photo from './photo';
 import Comments from './Comments';
 import './Single.css';
 
 class Single extends Component {
+  constructor(props) {
+    super(props);
+
+  }
 
   render() {
-    //console.log('this.props.match.params.postId ', this.props.match.params.postId);
     const postId = this.props.match.params.postId;
     const i = this.props.posts.findIndex( (post) => post.code ===  postId);
     const post = this.props.posts[i];
