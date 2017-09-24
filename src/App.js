@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  Switch
 } from 'react-router-dom'
 
 import './App.css';
@@ -16,10 +17,10 @@ class App extends Component {
       <div className="App">
           <Router>
             <div>
-              <div>
-                <Route exact path="/" component={PhotoGrid} />
-                <Route path="/:postId" component={Single} />
-              </div>
+              <Switch>
+                <Route exact path="/photogrid" component={PhotoGrid} />
+                <Route path="/photogrid/:postId" component={Single} />
+              </Switch>
             </div>
 
           </Router>

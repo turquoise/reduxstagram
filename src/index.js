@@ -16,6 +16,7 @@ import rootReducer from './reducers/index';
 //import Root from './root';
 //import PhotoGrid from './components/PhotoGrid';
 import App from './App';
+//import PhotoGrid from './components/PhotoGrid';
 
 //import registerServiceWorker from './registerServiceWorker';
 

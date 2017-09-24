@@ -1,6 +1,6 @@
 {
   "name": "reduxstagram",
-  "homepage": "https://turquoise.github.io/reduxstagram",
+  "homepage": "https://turquoise.github.io/reduxstagram/photogrid",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
