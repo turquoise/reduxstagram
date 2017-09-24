@@ -2,3 +2,11 @@
 .single-photo {
   width: 400px;
 }
+
+button {
+  margin-top: 20px;
+}
+
+.caption {
+  margin-bottom: 20px;
+}

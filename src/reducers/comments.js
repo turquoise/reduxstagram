@@ -1,12 +1,18 @@
 import comments_json from '../data/comments';
-import { REMOVE_COMMENT, ADD_COMMENT, INCREMENT_LIKES } from '../actions';
+import { REMOVE_COMMENT, ADD_COMMENT } from '../actions';
+
 
 function comments(state = comments_json, action) {
   switch (action.type) {
     case ADD_COMMENT:
-      return state;
-    case INCREMENT_LIKES:
-      return state;
+    const postId = action.postId;
+      return [
+        ...state.slice(),
+        {
+          user: action.author,
+          text: action.comment
+        }
+      ];
     case REMOVE_COMMENT:
       return state;
     default:
