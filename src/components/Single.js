@@ -22,24 +22,25 @@ class Single extends Component {
     return (
         <div className="container">
           <Link to="/"><h1>Reduxstagram</h1></Link>
-          <div className="row">
-            <div className="col-6">
-              <img className="single-photo" src={post.display_src}  />
-              <div>
-                <button className="btn btn-secondary likes" onClick={this.props.increment.bind(null, i)}>
-                  <i className="fa fa-heart" aria-hidden="true"></i> {post.likes}
-                </button>
+              <div className="row">
+                <div className="col-6">
+                  <img className="single-photo" src={post.display_src}  />
+                  <div>
+                    <button className="btn btn-secondary likes" onClick={this.props.increment.bind(null, i)}>
+                      <i className="fa fa-heart" aria-hidden="true"></i> {post.likes}
+                    </button>
+                  </div>
+                </div>
+                <div className="col-6">
+                  <div>
+                    <h5 className="caption">{post.caption}</h5>
+                  </div>
+                  <div>
+                    <Comments postComments={postComments} postId={postId}/>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="col-6">
-              <div>
-                <h5 className="caption">{post.caption}</h5>
-              </div>
-              <div>
-                <Comments postComments={postComments} postId={postId}/>
-              </div>
-            </div>
-          </div>
+          
         </div>
     );
   }
