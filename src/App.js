@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 
 import './App.css';
-//import Main from './components/Main';
+import Main from './components/Main';
 import Single from './components/Single';
 import PhotoGrid from './components/PhotoGrid';
 
@@ -18,8 +18,8 @@ class App extends Component {
           <Router>
             <div>
               <Switch>
-                <Route exact path="/" component={PhotoGrid} />
                 <Route path="/:postId" component={Single} />
+                <Route exact path="/" component={Main} />
               </Switch>
             </div>
 
