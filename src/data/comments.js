@@ -170,7 +170,7 @@ const comments = {
       "user": "lucascaixeta"
     }
   ],
-  "1rhFawccs":[
+  "-1rhFawccs":[
     {
       "text":"What's your lighting source?",
       "user": "seth_mcleod"
@@ -184,7 +184,7 @@ const comments = {
       "user": "stolinski"
     }
   ],
-  "pjx-gQcVi":[
+  "-pjx-gQcVi":[
 
   ],
   "oTZ0zQcWt":[
@@ -193,7 +193,19 @@ const comments = {
       "user": "_lindersss"
     }
   ],
-  "mxKQoQcQh":[
+  "-mxKQoQcQh":[
+
+  ],
+  "BAcJeJrQca9": [
+
+  ],
+  "-hZh6IQcfN": [
+
+  ],
+  "B3eiIwcYV": [
+
+  ],
+  "BAAJqbOQcW5": [
 
   ],
   "hZh6IQcfN":[
@@ -226,7 +238,7 @@ const comments = {
       "user": "gabrielvieira.me"
     }
   ],
-  "fasqlQceO":[
+  "-fasqlQceO":[
     {
       "text":"Where's lux at? 💤?",
       "user": "henrihelvetica"
@@ -236,7 +248,7 @@ const comments = {
       "user": "danielleplas"
     }
   ],
-  "VBgtGQcSf":[
+  "-VBgtGQcSf":[
     {
       "text":"@dogsandbrew",
       "user": "likea_bos"
@@ -250,7 +262,7 @@ const comments = {
       "user": "trevorb_91"
     }
   ],
-  "FpTyHQcau":[
+  "-FpTyHQcau":[
     {
       "text":"@kaitbos  that vest!!! 😍",
       "user": "courtneyeveline"
@@ -288,7 +300,7 @@ const comments = {
       "user": "wesbos"
     }
   ],
-  "B3eiIwcYV":[
+  "-B3eiIwcYV":[
     {
       "text":"If you get in the mood for authentic Italian pizza, check out @backspaceaustin - it's👌🏻",
       "user": "dessie.ann"

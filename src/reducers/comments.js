@@ -25,34 +25,18 @@ function postComments(state, action) {
 }
 
 function comments(state = comments_json, action) {
-  if (action.postId !== 'undefined') {
+  if (typeof action.postId ) {
+    //console.log('action.postId ', action.postId);
     return {
-      // take the current state.
       ...state,
       // overwrite this post with a new one.
       [action.postId]: postComments(state[action.postId], action)
     }
   }
   return state;
-  // switch (action.type) {
-  //   case ADD_COMMENT:
-  //     const postId = action.postId;
-  //     return [
-  //       ...state.push(action.postId, action.author, action.comment)
-  //     ]
-  //   case REMOVE_COMMENT:
-  //     const comments = _.omitBy( state, function(value, key) {
-  //       console.log('value ', value, 'key ', key);
-  //       //return !key.startsWith(action.postId);
-  //     });
-  //     console.log('comments ', comments);
-  //
-  //     //return comments;
-  //   default:
-  //     console.log('comments state ', state);
-  //     return state;
-  //}
-
 }
+
+
+
 
 export default comments;
