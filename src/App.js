@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route,
   Link,
   Switch
@@ -20,7 +20,7 @@ class App extends Component {
               <Switch>
                 <Route path="/:postId" component={Single} />
                 <Route exact path="/" component={Main} />
-                <Route render={ () => <p>Not Found</p> } />
+                <Route path='**' component={Main}/>
               </Switch>
             </div>
 
