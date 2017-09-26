@@ -6,6 +6,7 @@ import { addComment, removeComment, increment } from '../actions';
 import './PhotoGrid.css';
 //import Photo from './photo';
 import { GridList, GridTile } from 'material-ui/GridList';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import IconButton from 'material-ui/IconButton';
 import Subheader from 'material-ui/Subheader';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
@@ -30,13 +31,16 @@ class PhotoGrid extends Component {
   render() {
     return (
       <div>
-
       <MuiThemeProvider>
       <div style={styles.root}>
-        <GridList cellHeight={400} cols={4}  padding={10}>
+        <div className="container">
+          <div className="row">
+
           {
             this.props.posts.map( (post, i) => (
-                <GridTile key={i} >
+
+                <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12" key={i} >
+
                   <Card style={styles.root}>
                     <Link to={`/${post.code}`}>
                       <CardMedia overlay={<CardTitle subtitle={post.caption}/> }>
@@ -59,10 +63,14 @@ class PhotoGrid extends Component {
 
                     </Link>
                   </Card>
-                </GridTile>
+
+              </div>
+
               ))
           }
-        </GridList>
+        </div>
+        </div>
+
       </div>
       </MuiThemeProvider>
     </div>
